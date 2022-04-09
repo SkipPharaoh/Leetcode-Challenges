@@ -19,7 +19,7 @@ Input: heights = [[2,1],[1,2]]
 Output: [[0,0],[0,1],[1,0],[1,1]]
 ```
 
-// 1st Method //
+// 1st Method // incomplete
 const pacificAtlantic = function(heights) {
     let result = [];
     let pacific = [];
