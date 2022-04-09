@@ -38,7 +38,7 @@ const twoSum = (nums, target) => {
 }
 
 // 2nd Method //
-const twoSum = (nums, target) => {
+const twoSums = (nums, target) => {
     let output = []
     for (let i = 0; i < nums.length; i++) {
         let y = nums.indexOf(target - nums[i])
