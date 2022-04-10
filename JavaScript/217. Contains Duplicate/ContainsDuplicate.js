@@ -8,7 +8,7 @@ Example 1:
 Input: nums = [1,2,3,1]
 Output: true
 ```
-
+// 1st Method //
 var containsDuplicate = function(nums) {
     // loop to run through all nums
     for (let i=0; i < nums.length; i++) {
@@ -20,6 +20,17 @@ var containsDuplicate = function(nums) {
         }
     }
     return false;
+}
+
+// 2nd Method //
+const containsDuplicates = (nums) => {
+    const uniqueSet = [... new Set(nums)]
+    if (uniqueSet.length === nums.length) {
+        return false
+    }
+    else if ( uniqueSet.length !== nums.length) {
+        return true
+    }
 }
 
 let nums = [1,2,3,1]
