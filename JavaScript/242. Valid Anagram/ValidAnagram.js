@@ -15,7 +15,7 @@ Input: s = "rat", t = "car"
 Output: false
 ```
 
-// 1st Method //
+// 1st Method // ~127ms
 const isAnagram = (s, t) => {
     if (s.length !== t.length) {
         return false
@@ -27,5 +27,14 @@ const isAnagram = (s, t) => {
         } else {
             return true
         }
+    }
+}
+
+// 1st Method Refactored // ~185ms
+const isAnagrams = (s, t) => {
+    if (s.length !== t.length) {
+        return false
+    } else {
+        return s.split("").sort().join("") === t.split("").sort().join("")
     }
 }
