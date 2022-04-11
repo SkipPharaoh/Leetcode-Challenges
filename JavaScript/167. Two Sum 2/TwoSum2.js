@@ -25,20 +25,8 @@ Input: numbers = [-1,0], target = -1
 Output: [1,2]
 Explanation: The sum of -1 and 0 is -1. Therefore index1 = 1, index2 = 2. We return [1, 2].
 ```
-// 1st Method // incomplete
-const twoSum = (numbers, target) => {
-    for (let i=0; i < numbers.length; i++) {
-        let diff = target - numbers[i]
-        if (numbers[i] + diff === target) {
-            if (numbers[i] !== diff || numbers[i] === diff && i !== i+1) {
-              console.log( numbers[i], diff)
-              return [numbers.indexOf(numbers[i]) +1, numbers.indexOf(diff)+1]
-            }
-        }
-    }
-}
 
-// 2nd Method //
+// 1nd Method //
 const twoSums = (numbers, target) => {
     let left = 0;
     let right = numbers.length - 1;
@@ -50,6 +38,19 @@ const twoSums = (numbers, target) => {
             left++;
         } else {
             right--;
+        }
+    }
+}
+
+// 2st Method // incomplete
+const twoSum = (numbers, target) => {
+    for (let i=0; i < numbers.length; i++) {
+        let diff = target - numbers[i]
+        if (numbers[i] + diff === target) {
+            if (numbers[i] !== diff || numbers[i] === diff && i !== i+1) {
+              console.log( numbers[i], diff)
+              return [numbers.indexOf(numbers[i]) +1, numbers.indexOf(diff)+1]
+            }
         }
     }
 }
