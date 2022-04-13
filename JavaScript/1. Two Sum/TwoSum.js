@@ -24,7 +24,6 @@ Output: [0,1]
 
 // 1st Method //
 const twoSum = (nums, target) => {
-    let output = []
     for (let i =0; i < nums.length; i++) {
         for ( let y=0; y < nums.length; y++) {
             if (nums[i] + nums[y] === target) {
@@ -39,7 +38,6 @@ const twoSum = (nums, target) => {
 
 // 2nd Method //
 const twoSums = (nums, target) => {
-    let output = []
     for (let i = 0; i < nums.length; i++) {
         let y = nums.indexOf(target - nums[i])
         if (y !== -1 && y !== i) {
