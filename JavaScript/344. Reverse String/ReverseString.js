@@ -32,3 +32,13 @@ var reverseString = function(s) {
     }
     return s;
 }
+
+// 3rd Method //
+const reverseStrings = (s) => {
+    let answer = ""
+    for (let i = s.length-1; i >=0; i--) {
+        answer += s[i]
+    }
+    answer = answer.toLowerCase()
+    return answer
+}
