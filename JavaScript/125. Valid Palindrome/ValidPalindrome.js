@@ -22,12 +22,25 @@ Output: true
 Explanation: s is an empty string "" after removing non-alphanumeric characters.
 Since an empty string reads the same forward and backward, it is a palindrome.
 
-```
-
+```;
 
 // 1st Method //
 const isPalindromes = (s) => {
-    const word = s.toLowerCase().replace(/[^a-z0-9]/g, '');
-    const reverseWord = word.split('').reverse().join('');
-    return word === reverseWord;
+  const word = s.toLowerCase().replace(/[^a-z0-9]/g, "");
+  const reverseWord = word.split("").reverse().join("");
+  return word === reverseWord;
+};
+
+// 2nd Method //
+function isPalindrome(str) {
+  let newStr = str.split("");
+  let reverseWrd = [];
+  for (let i = 0; i < str.length; i++) {
+    reverseWrd.unshift(newStr[i]);
+  }
+  if (reverseWrd.join("").toLowerCase() === str.toLowerCase()) {
+    return true;
+  } else {
+    return false;
+  }
 }

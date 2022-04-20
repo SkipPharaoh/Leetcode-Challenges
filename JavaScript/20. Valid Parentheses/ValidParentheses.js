@@ -20,25 +20,23 @@ Example 3:
 Input: s = "(]"
 Output: false
 
-```
+```;
 
 var isValid = (s) => {
-    let map = {
-        ")": '(',
-        "]": '[',
-        "}": '{'
-    }
-    let stack = []
-    // splitS = s.split("")
-    for (let i=0; i< s.length; i++) {
-    if (s[i] === '(' || s[i] === '[' || s[i] === '{' ) {
-        stack.push(s[i])
+  let map = {
+    ")": "(",
+    "]": "[",
+    "}": "{",
+  };
+  let stack = [];
+  for (let i = 0; i < s.length; i++) {
+    if (s[i] === "(" || s[i] === "[" || s[i] === "{") {
+      stack.push(s[i]);
     } else {
-        if (stack.pop() !== map[s[i]]) {
-        return false
-        }
+      if (stack.pop() !== map[s[i]]) {
+        return false;
+      }
     }
-    // console.log(splitS[i])
-    }
-    return stack.length === 0
-}
+  }
+  return stack.length === 0;
+};
