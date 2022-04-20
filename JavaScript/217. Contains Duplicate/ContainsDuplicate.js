@@ -33,6 +33,18 @@ const containsDuplicates = (nums) => {
     }
 }
 
+// 3rd Method //
+const duplicates = (lst1, lst2) => {
+    const resultArr = [...lst1, ...lst2]
+    let result = []
+    for (let i in resultArr) {
+        if (result.indexOf(resultArr[i]) === -1) {
+            result.push(resultArr[i])
+        }
+    }
+    console.log(resultArr)
+}
+
 let nums = [1,2,3,1]
 containsDuplicate([1,2,3,1])
 containsDuplicate([1,2,3,4])
