@@ -18,4 +18,12 @@ Input: nums = [5,4,-1,7,8]
 Output: 23
 */
 
-const maxSubArray = (nums) => {}
+const maxSubArray = (nums) => {
+    let max = nums[0];
+    let current = nums[0];
+    for (let i = 1; i < nums.length; i++) {
+        current = Math.max(current + nums[i], nums[i]);
+        max = Math.max(max, current);
+    }
+    return max;
+}
